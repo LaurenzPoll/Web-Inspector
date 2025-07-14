@@ -13,7 +13,7 @@ Minimal tool to analyze a webpage’s content (headers, text, etc.) and suggest 
 ### CLI
 
 ```bash
-python main.py <URL>
+python analyse_page.py <URL>
 ```
 
 ### Output
