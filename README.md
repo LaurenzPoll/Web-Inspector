@@ -36,5 +36,21 @@ pip install -r requirements.txt
 - Advanced recommendations (SEO, accessibility, etc.)
 - Web interface
 
-License
+## Branch Naming Conventions
+
+The following branch prefixes are used to keep the Git history clean and descriptive:
+
+| Prefix      | Purpose                                   | Example                    |
+|-------------|-------------------------------------------|----------------------------|
+| `feat/`     | New features                              | `feat/header-validation`   |
+| `fix/`      | Bug fixes                                 | `fix/empty-header-bug`     |
+| `refactor/` | Refactoring code, no functional change    | `refactor/modularize`      |
+| `test/`     | Adding or updating tests                  | `test/header-analysis`     |
+| `docs/`     | Documentation changes                     | `docs/readme-clarity`      |
+| `chore/`    | Maintenance, tooling, dependency updates  | `chore/update-deps`        |
+
+- Use descriptive branch names, e.g., `feat/scraper-cli` instead of just `feat/cli`.
+- Always start a new branch from the latest `main`.
+
+## License
 MIT License
