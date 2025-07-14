@@ -1,7 +1,9 @@
 import sys
+
 from bs4 import BeautifulSoup
 from header_analysis import check_header_order
-from html_utils import fetch_html, extract_headers, extract_main_text
+from html_utils import extract_headers, extract_main_text, fetch_html
+
 
 def analyze(url: str):
     try:
@@ -10,17 +12,17 @@ def analyze(url: str):
         print(f"Failed to fetch {url}:\n{e}")
         return
 
-    soup = BeautifulSoup(html, 'html.parser')
+    soup = BeautifulSoup(html, "html.parser")
     headers = extract_headers(soup)
     main_text = extract_main_text(soup)
 
     tips = []
-    if not any(h[0] == 'H1' for h in headers):
-        tips.append('[MUST] Add at least one H1 header.')
+    if not any(h[0] == "H1" for h in headers):
+        tips.append("[MUST] Add at least one H1 header.")
     if len(headers) < 3:
-        tips.append('[SHOULD] Add more header tags for better structure.')
+        tips.append("[SHOULD] Add more header tags for better structure.")
     if len(main_text) < 200:
-        tips.append('[COULD] Consider adding more main content.')
+        tips.append("[COULD] Consider adding more main content.")
     if header_tips := check_header_order(headers):
         tips.extend(header_tips)
 

@@ -12,7 +12,7 @@ Minimal tool to analyze a webpage’s content (headers, text, etc.) and suggest 
 
 ### CLI
 
-```bash
+```sh
 python analyse_page.py <URL>
 ```
 
@@ -27,7 +27,7 @@ python analyse_page.py <URL>
 - beautifulsoup4
 
 Install dependencies:
-```bash
+```sh
 pip install -r requirements.txt
 ```
 
@@ -51,6 +51,20 @@ The following branch prefixes are used to keep the Git history clean and descrip
 
 - Use descriptive branch names, e.g., `feat/scraper-cli` instead of just `feat/cli`.
 - Always start a new branch from the latest `main`.
+
+## Code Style and Linting
+
+This project uses [Ruff](https://docs.astral.sh/ruff/) for linting, code formatting, and import sorting.
+
+- To lint and auto-fix your code, run:
+```sh
+ruff check . --fix
+```
+
+- To format only:
+```sh
+ruff format .
+```
 
 ## License
 MIT License
